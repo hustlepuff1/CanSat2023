@@ -1,0 +1,6 @@
+building
+helipad
+ground
+building
+helipad
+ground

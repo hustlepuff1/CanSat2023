@@ -1,0 +1,5 @@
+vehicle
+cycle
+bus
+truck
+van

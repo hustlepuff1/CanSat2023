@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Display</title>
+    <meta charset="UTF-8">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/3.2.0/socket.io.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="data"></div>
+<script type="text/javascript" charset="utf-8">
+    var socket = io.connect('http://' + document.domain + ':' + location.port + '/test');
+    socket.on('newdata', function (msg) {
+        // Remove existing data
+        document.getElementById('data').innerHTML = '';
+
+        // Add new data
+        for (var i = 0; i < msg.data.length; i++) {
+            var dataItem = document.createElement('p');
+            dataItem.textContent = 'Latitude: ' + msg.data[i].lat + ', Longitude: ' + msg.data[i].longi;
+            document.getElementById('data').appendChild(dataItem);
+        }
+    });
+</script>
+</body>
+</html>
