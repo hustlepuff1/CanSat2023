@@ -163,8 +163,7 @@ pip install pyqt5 pyqtgraph numpy mysql-connector-python watchdog
 
 ## License
 
-This project is for educational and research purposes.
+Feel free to do whatever the hell you want.
+If you are planning to make money with this? Well then, good luck.
 
 ---
-
-Feel free to modify this README to better fit your team's workflow or add more details about each script!
